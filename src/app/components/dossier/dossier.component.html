@@ -1,0 +1,36 @@
+<div class="container-fliud">
+  <app-navbar></app-navbar>
+</div>
+<br>
+<br>
+<br>
+<br>
+<p *ngIf="message" style="color:green">{{message}}</p>
+<form action="/action_page.php" method="post" class="row g-3">
+   
+  <div class="col-md-6">
+    <label for="inputcode" class="form-label" >Code dossier</label>
+    <input type="text" class="form-control" placeholder="Veillez entrer le code du dossier" [(ngModel)]="dossier.dossier_id" name="dossier_id" >
+  </div>
+  <div class="col-md-6">
+    <label for="input "  class="form-label">Nom</label>
+    <input type="text" class="form-control" placeholder="Veillez entrer le nom du dossier" [(ngModel)]="dossier.nom"  name="nom">
+  </div>
+  <div class="col-md-6">
+    <label for="input " class="form-label" >Description</label>
+    <input type="text" class="form-control" placeholder="Veillez descrire le dossier" [(ngModel)]="dossier.descriptions" name="descriptions" >
+  </div>
+  <div class="col-md-6">
+    <label for="inputnumero" class="form-label">Numéro classeur</label>
+    <input type="number" class="form-control" placeholder="Veillez entrer l'iddentifiant du classeur" [(ngModel)]="dossier.classeur_id" name="classeur_id">
+  </div>
+  
+  <div class="col-md-12 button">
+    <button type="button" class="btn btn-info col-md-4" (click)="onClick()">Enregistrer</button>
+    <button type="reset" class="btn btn-warning col-md-4 cancelbtn">Annuler</button>
+  </div>
+</form> 
+<div class="container-fliud">
+  <app-footer></app-footer>
+</div>
+

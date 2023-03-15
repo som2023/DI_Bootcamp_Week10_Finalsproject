@@ -1,0 +1,24 @@
+<div class="container-fliud">
+    <app-navbar></app-navbar>
+  </div>
+ <br>
+<br>
+<br>
+<br>
+<p *ngIf="message" style="color:green">{{message}}</p>
+<form action="#" method="post">
+  <div class="container">
+    <label for="uname"><h4><b>Code classeur</b></h4></label>
+    <input type="text" placeholder="Veillez enter la description" [(ngModel)]="classeur.code_classeur"  name="code_classeur" required onfocus>
+    <label for="uname"><h4><b>Numero Armoire</b></h4></label>
+    <input type="number" placeholder="Veillez enter l'identifiant de l'armoire" [(ngModel)]="classeur.armoire_id" name="armoire_id" required>
+     <div class="btn1">
+     <button class="btn btn-info btn-lg mx-2" type="submit"  (click)="onClick()" >Enregistrer</button>
+     <input class="btn btn-warning btn-lg mx-2" type="reset" value="Annuler">
+   </div> 
+  </div>
+</form>
+<div class="container-fliud">
+    <app-footer></app-footer>
+  </div>
+

@@ -1,0 +1,46 @@
+form{
+  background-image: url('../../../assets/dossier_images/group3.png');
+ background-repeat: no-repeat;
+ background-size: cover; 
+}
+h2{
+  text-align: center;
+}
+.row{
+  
+  margin: 0 auto;
+  width: 50%;  
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px;;
+  border-radius:10px;
+}
+.btn{
+  margin: 15px;
+}
+.btn:hover {
+  opacity: 0.8;
+  background-color: #101010;
+  color: white;
+}
+.form-control{
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 100px;
+  padding: 8px 15px;
+  margin: 8px 0;
+  
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+} 

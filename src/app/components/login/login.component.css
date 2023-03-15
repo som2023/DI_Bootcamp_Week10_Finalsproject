@@ -1,0 +1,89 @@
+:root {
+  --primaryColor: #246aeb;
+    --secondaryColor: #4a514d;
+    --orangeColor: #f94e4e;
+    --purpleColor: #4c0d99;
+    --heaven-color: #1a4aac;
+    --color-dark: #535556;
+    --dark-light:#f1f1f1;
+    --loginbutton: #04AA6D;
+    --white-color: #fff;
+    --red-color: red;
+}
+
+body {font-family: Arial, Helvetica, sans-serif; background-color: #ffe4e6;}
+form {border: 0px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 100px;
+ }
+
+button {
+  background-color:#04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  border-radius: 10px;
+  font-size: 16px;
+}
+button:hover {
+  opacity: 0.8;
+  background-color: #101010;
+ 
+}
+.imgcontainer {
+  text-align: center;
+  margin: 14px 0 2px 0;
+}
+
+img.avatar {
+  width: 12%;
+  border-radius: 25%;
+  
+}
+.container{
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+h2{
+    text-align: center;    
+}
+.password{
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color:#bfdbfe;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}

@@ -1,0 +1,50 @@
+<div class="half"> 
+  <div class="bg order-1 order-md-2" style="background-image: url('../../../assets/inscrire_images/ordi.jpg');"></div>
+  <div class="contents order-2 order-md-1">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-6">
+          <div class="form-block">
+            <div class="register text-center">
+            <h3><span style="color: brown;">ESPACE D'INSCRIPTION</span></h3>
+            <img src="../../../assets/inscrire_images/icone.jpg" alt="Avatar Logo" style="width: 70px" class="rounded-pill"/> 
+            </div>
+            <form action="#" method="post">
+              <div class="form-group first">
+                <label for="name">Nom</label>
+                <input type="text" class="form-control" placeholder="lastname" name="nom" id="name" [(ngModel)]="user.nom">
+              </div>
+              <div class="form-group first">
+                <label for="name">Prenom</label>
+                <input type="text" class="form-control" placeholder="lastname" name="Prenom" id="name" [(ngModel)]="user.prenom">
+              </div>
+              <div class="form-group first">
+                <label for="username">Email</label>
+                <input type="text" class="form-control" placeholder="your-email@gmail.com" name="email" id="username" [(ngModel)]="user.email" >
+              </div>
+              <div class="form-group first">
+                <label for="username">Contact</label>
+                <input type="text" class="form-control" placeholder="contact" id="username" name="contact" [(ngModel)]="user.contact">
+              </div>
+              <div class="form-group first">
+                <label for="username">Pseudo</label>
+                <input type="text" class="form-control" placeholder="username"  name="pseudo" id="username" [(ngModel)]="user.pseudo">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" placeholder="entrer le mot de passe" name = "pwd" id="password" [(ngModel)]="user.pwd">
+              </div>
+              <div class="form-group first">
+                <label for="username">roles id</label>
+                <input type="number" class="form-control" placeholder="l'identifiant utilisateur"  name="pseudo" id="username" [(ngModel)]="user.roles">
+              </div>
+              <br>
+              <button type="submit" value="Register" (click)="onClick()" class="btn btn-block btn-primary">Envoyer</button>
+              <button type="reset" value="annuler" class="btn btn-block btn-warning mx-2">Annuler</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
