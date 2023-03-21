@@ -5,21 +5,24 @@
 <br>
 <br>
 <br>
-<p *ngIf="message" style="color:green">{{message}}</p>
+ 
 <form action="/action_page.php" method="post">
   <div class="container">
     <label for="uname"><h4><b>Code Armoire</b></h4></label>
-    <input type="text" placeholder="Veillez enter la description"  [(ngModel)]="armoire.code_armoire"  name="code_armoire" required onfocus>
-    <label for="uname"><h4>  <b>Description</b></h4></label>
-    <input type="text" placeholder="Veillez enter la description"   [(ngModel)]="armoire.descriptions" name="descriptions" required>
+    <input type="text" placeholder="Veillez enter la description" [(ngModel)]="armoire.code_armoire"  name="code_armoire" required onfocus>
+    <label for="uname"><h4><b>Description</b></h4></label>
+    <input type="text" placeholder="Veillez enter la description" [(ngModel)]="armoire.description" name="descriptions" required>
     <label for="psw"><h4><b> Numero compagnie </b></h4> </label>
-    <input type="number" placeholder="choisissez le numero du compagnie"  [(ngModel)]="armoire.compagnie_id"  name="compagnie_id" required>
+    <input type="number" placeholder="choisissez le numero du compagnie" [(ngModel)]="armoire.compagnie_id"  name="compagnie_id" required>
      <div class="btn1">
      <button class="btn btn-info btn-lg mx-2" type="submit"  (click)="onClick()" >Enregistrer</button>
      <input class="btn btn-warning btn-lg mx-2" type="reset" value="Annuler">
    </div> 
   </div>
 </form>
+<div class="container-fliud">
+  <app-todolistarmoire></app-todolistarmoire>
+</div>
 <div class="container-fliud">
     <app-footer></app-footer>
   </div>

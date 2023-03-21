@@ -1,7 +1,10 @@
-import { WebserviceService } from './../../../services/webservice.service';
+//import { TodolistpaysService } from '../../../../services/todolistpays.service';
+import { TodolistpaysService } from 'src/app/services/todolistpays/todolistpays.service';
+import { WebserviceService } from '../../../services/webservice.service';
 // import { WebserviceService } from './../../services/webservice.service';
-import { Pays } from './../../../pays';
+import { IPays } from './../../../pays';
 import { Component } from '@angular/core';
+import { FunctionsService } from 'src/app/services/API/functions.service';
 
 @Component({
   selector: 'app-ajouter',
@@ -10,20 +13,23 @@ import { Component } from '@angular/core';
 })
 export class AjouterComponent {
 
-  pays: Pays = new Pays()
+  valpays:IPays={
+    nom:'',
+    localisation:''
+  };
+ 
+constructor(private paysAjout:FunctionsService) {}
 
-  constructor(private api: WebserviceService) {}
-
-  ngOnInit(): void{
-
-
-  }
-
-  onClick() {
-    this.api.savePays(this.pays).subscribe(
-                                            data => {console.log(data)}
-                                          )
+ajouterPays(){
+  this.paysAjout.ajoutPays(this.valpays).subscribe({
+ next:data=>{
+  console.log(data)
+  alert('Enregistré avec succès')
+ },
+ error:err=>{
+  console.log(err); }
+});
 }
+ }
 
 
-}

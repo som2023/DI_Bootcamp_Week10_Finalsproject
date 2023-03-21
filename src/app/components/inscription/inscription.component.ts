@@ -1,6 +1,6 @@
-import { WebserviceService } from './../../services/webservice.service';
+import { WebserviceService } from '../../services/webservice.service';
 import { Component } from '@angular/core';
-import { User } from 'src/app/models/user';
+import { IUser} from 'src/app/models/user/user';
 
 @Component({
   selector: 'app-inscription',
@@ -9,19 +9,28 @@ import { User } from 'src/app/models/user';
 })
 export class InscriptionComponent {
 
-  user: User = new User()
+  user: IUser={
+    utilisateur_id:0,
+    nom:'',
+    prenom:'',
+    email:'',
+    contact:'',
+    pseudo:'',
+    pwd:'',
+  };
 
   constructor(private api: WebserviceService) {}
 
-  ngOnInit(): void{
-
-
-  }
+  ngOnInit(): void{}
+  
 
   onClick() {
     this.api.saveUser(this.user).subscribe(
-                                            data => {console.log(data)}
-                                          )
+  data => {console.log(data)
+  alert("Enregistré avec succès") 
+  window.location.reload();
+ });
 }
+
 
 }

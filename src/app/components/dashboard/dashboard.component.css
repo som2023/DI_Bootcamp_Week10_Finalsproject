@@ -1,3 +1,10 @@
+ 
+ 
+/* :root{
+  --bs-info:var(--bs-info);
+  --bgcolor:var(--bs-body-color-rgb);
+  --bs-light:var(--bs-light);
+} */
 body {
     font-size: .875rem;
   }
@@ -44,7 +51,7 @@ body {
   }
   
   .sidebar .nav-link.active {
-    color: #2470dc;
+    color: var(--bs-light);
   }
   
   .sidebar .nav-link:hover .feather,
@@ -137,9 +144,9 @@ body {
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }  
-       
+        
     #sidebarMenu {
-        background-color: rgb(140, 195, 30) !important;
+        background-color:var(--bs-info)!important;
     }
     i{
         font-size:30px;
@@ -156,3 +163,19 @@ body {
     main{
         padding-right:5rem;
     }
+    img{
+      text-align: center;
+      margin-left: 500px;
+      margin-top: -50px;
+
+  }
+  .form-control:hover{
+     background-color:azure;
+  }
+ .hovertext:hover{
+  background-color:#DCDCDC;
+ }
+ .btn:hover{
+   background-color:orange;
+   color: #fff;
+ }

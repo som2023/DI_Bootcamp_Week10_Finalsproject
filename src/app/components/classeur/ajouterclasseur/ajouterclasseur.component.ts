@@ -1,6 +1,6 @@
-import { Classeur } from './../../../models/classeur';
+import { IClasseur } from './../../../models/classeur/classeur';
 import { Component } from '@angular/core';
-import { ClasseurService } from 'src/app/services/classeur.service';
+import { ClasseurService } from 'src/app/services/classeur/classeur.service';
 
 @Component({
   selector: 'app-ajouterclasseur',
@@ -8,8 +8,12 @@ import { ClasseurService } from 'src/app/services/classeur.service';
   styleUrls: ['./ajouterclasseur.component.css']
 })
 export class AjouterclasseurComponent {
-  message = '';
-  classeur: Classeur = new Classeur()
+   
+  classeur: IClasseur={
+    classeur_id:0,
+    code_classeur:'',
+    armoire_id:0,
+  } 
 
   constructor(private api:ClasseurService) {}
 
@@ -19,9 +23,10 @@ export class AjouterclasseurComponent {
     this.api.saveClasseur(this.classeur).subscribe(
       {next: (data)=>{
         console.log(data);
-        this.message= 'Enregistrement reussi avec succes';
+        alert('Enregistrement reussi avec succes');
+        window.location.reload();
       },error(err) {
-        console.log(err);
+        alert("Echec d'Enregistrement");
         onmessage = err.message;
       },}
       

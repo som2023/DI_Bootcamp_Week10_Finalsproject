@@ -1,18 +1,24 @@
-body {font-family: Arial, Helvetica, sans-serif; background-color: #ffe4e6;
+body {font-family: Arial, Helvetica, sans-serif; background-color: hsl(356, 100%, 95%);
+
 }
 form {border: 0px solid #f1f1f1;
+  /* background-image: url('../../../../assets/pays_images/t.webp');
+  background-repeat: no-repeat;
+  background-size: cover;} */
 }
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=number]{
   width: 30%;
-  padding: 8px 15px;
+  padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
   border-radius: 100px;
- }
+ 
+}
+
 .btn{
-  /* background-color: #20513f; */
+   
   color: white;
   padding: 14px 20px;
   cursor: pointer;
@@ -22,39 +28,52 @@ input[type=text], input[type=password] {
   width: 70%;
   font-size: 16px; 
 }
+
 .btn:hover {
   opacity: 0.8;
   background-color: #101010;
   color: white;
+ 
 }
+
+/* .btn{
+  width: auto;
+  padding: 14px 20px;
+  background-color: #f44336;
+  border: none;
+  cursor: pointer;
+  margin: 8px 0;
+  width: 70%;
+  border-radius: 10px;
+  font-size: 16px; 
+}
+.btn:hover {
+    opacity: 0.8;
+    background-color:rgb(24, 24, 23);
+    color: white;
+   
+  } */
 .container{
- /* background-image: url('images/group3.png');
- background-repeat: no-repeat;
- background-size: cover; */
-  padding: 2rem 1rem;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.container-fliud{
-    margin-bottom: 300px;
+  
 }
  
 h2{
     text-align: center;
+
+     
 }
  .btn1{
     display:inline-flex;
     margin-right: 2px;
     padding: 2rem;
  }
-hr{
-  border-color: #101010;
-  border-radius: 2px;
-}
+  
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {

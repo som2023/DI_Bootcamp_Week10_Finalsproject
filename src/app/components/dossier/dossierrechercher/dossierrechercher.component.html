@@ -1,0 +1,115 @@
+ <div class="container-fluid">
+   <app-navbardashboard></app-navbardashboard>
+ </div>
+ <br>
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#"> Archives <span style="color: rgb(139, 26, 26);">Aéronautique</span></a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <span class="nav-text" style="color:#fff;">TABLEAU DE CLASSIFICATION DES DOSSIERS</span>
+    <div class="navbar-nav">
+      <div class="nav-item text-nowrap">
+       <h4></h4> <a class="nav-link px-3 active" href="#">Déconnexion</a>
+      </div>
+    </div>
+    </header>
+    <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+        <div class="position-sticky pt-3 sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <span data-feather="home" class="align-text-bottom"></span>
+               <div class="hovertext"> <i class="fa-solid fa-house"></i> DASHBOARD </div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file" class="align-text-bottom"></span>
+                <div class="hovertext">   <i class="fa-solid fa-box-archive"></i> Historique</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"[routerLink]="['/dossierrechercher']">
+                <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                <div class="hovertext">  <i class="fa-solid fa-folder-tree"></i> Classification dossier </div>
+              </a>
+            </li>
+            <h2 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+                <span  style="color: #fff;"><h6>Nouvel Sauvegarde</h6> </span>
+                <a class="link-secondary" href="#" aria-label="Add a new report">
+                  <span data-feather="plus-circle" class="align-text-bottom"></span>
+                </a>
+            </h2>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="users" class="align-text-bottom"></span>
+                  <div class="hovertext"> <i class="fa-solid fa-building"></i> Compagnies </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="users" class="align-text-bottom"></span>
+                  <div class="hovertext">   <i class="fa-solid fa-globe"></i> Pays</div>
+                 </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="users" class="align-text-bottom"></span>
+                  <div class="hovertext">   <i class="fa-solid fa-folder"></i> DOSSIERS </div>
+                </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-----------Main section-------->
+
+     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+            </div>
+                <h2 class="pb-2 border-bottom "><span style="color: brown;">   Classification dossier </span>   </h2>
+                <br>
+                <br>
+                 
+                <img src="../../../../assets/dossier_images/dos.png" style="width:150px; height: 150px;" alt="avatar"/>
+                <div class="container1">
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Rechercher</button>
+                  </form>
+                  <br>
+                  <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">code dossier</th>
+                          <th scope="col">code armoire</th>
+                          <th scope="col">code classeur</th>
+                          <th scope="col">nom dossier</th>
+                          <th scope="col">date traitement </th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let traitementlist of traitement">
+                          <th scope="row">{{traitementlist.traitement_id}}</th>
+                          <td>{{traitementlist.date_traitement }}</td>
+                          <td>{{traitementlist.dossier_id }}</td>
+                          <td>{{traitementlist.utilisateur_id}}</td>
+                          <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifier/'+traitementlist.traitement_id]">Modifier</button>
+                            <button type="button" class="btn btn-outline-danger">supprimer</button></td>
+                        </tr>             
+                      </tbody>
+                    </table>      
+              
+                </div>
+              </div>
+    
+            </main>
+    </div>
+    </div>
+    

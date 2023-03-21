@@ -1,5 +1,6 @@
-import { ArmoireService } from './../../../services/armoire.service';
-import { Armoire } from './../../../models/armoire';
+//import { ArmoireService } from './../../../services/armoire.service';
+import { ArmoireService } from 'src/app/services/armoire/armoire.service';
+import { IArmoire } from 'src/app/models/armoire/armoire';
 // import { ArmoireService } from './../../../services/compagnie.service';
  
 import { Component } from '@angular/core';
@@ -11,8 +12,13 @@ import { Component } from '@angular/core';
 })
 export class AjouterarmoireComponent {
 
-  message = '';
-  armoire: Armoire = new Armoire()
+  
+  armoire: IArmoire={
+    armoire_id:0,
+    code_armoire:'',
+    description: '',
+    compagnie_id:0
+  };
 
   constructor(private api:ArmoireService) {}
 
@@ -22,9 +28,10 @@ export class AjouterarmoireComponent {
     this.api.saveAmoire(this.armoire).subscribe(
       {next: (data: any)=>{
         console.log(data);
-        this.message= 'Enregistrement reussi avec succes';
+       alert('Enregistrement reussi avec succes');
+       window.location.reload();
       },error(err) {
-        console.log(err);
+        alert("Echec d'enregistrement");
         onmessage = err.message;
       },}
       

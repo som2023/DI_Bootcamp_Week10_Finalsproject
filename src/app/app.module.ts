@@ -21,6 +21,18 @@ import { AjoutercompagnieComponent } from './components/compagnie/ajoutercompagn
 import { AjouterarmoireComponent } from './components/armoire/ajouterarmoire/ajouterarmoire.component';
 import { AjouterclasseurComponent } from './components/classeur/ajouterclasseur/ajouterclasseur.component';
 import { TraitementComponent } from './components/traitement/traitement/traitement.component';
+import { TodolistComponent } from './components/todolist/todolist.component';
+import { ModifierComponent } from './components/pays/modifier/modifier.component';
+import { ModifierdossierComponent } from './components/dossier/modifierdossier/modifierdossier.component';
+import { TodolistdossierComponent } from './components/dossier/todolistdossier/todolistdossier.component';
+import { DossierrechercherComponent } from './components/dossier/dossierrechercher/dossierrechercher.component';
+import { ModifierarmoireComponent } from './components/armoire/modifierarmoire/modifierarmoire.component';
+import { TodolistarmoireComponent } from './components/armoire/todolistarmoire/todolistarmoire.component';
+import { ModifierclasseurComponent } from './components/classeur/modifierclasseur/modifierclasseur.component';
+import { TodolistclasseurComponent } from './components/classeur/todolistclasseur/todolistclasseur.component';
+import { TodolistcompagnieComponent } from './components/compagnie/todolistcompagnie/todolistcompagnie.component';
+import { ModifiercompagnieComponent } from './components/compagnie/modifiercompagnie/modifiercompagnie.component';
+import { NavbardashboardComponent } from './components/navbardashboard/navbardashboard.component';
  
 
 
@@ -42,8 +54,19 @@ import { TraitementComponent } from './components/traitement/traitement/traiteme
     AjouterarmoireComponent,
     AjouterclasseurComponent,
     TraitementComponent,
-    
-  
+    TodolistComponent,
+    ModifierComponent,
+    ModifierdossierComponent,
+    TodolistdossierComponent,
+    DossierrechercherComponent,
+    ModifierarmoireComponent,
+    TodolistarmoireComponent,
+    ModifierclasseurComponent,
+    TodolistclasseurComponent,
+    TodolistcompagnieComponent,
+    ModifiercompagnieComponent,
+    NavbardashboardComponent,
+     
   
   ],
   imports: [

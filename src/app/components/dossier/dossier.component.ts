@@ -1,6 +1,6 @@
-import { Dossier } from './../../models/dossier';
 import { Component } from '@angular/core';
-import { DossierService } from 'src/app/services/dossier.service';
+import { IDossier } from 'src/app/models/dossier/dossier';
+import { DossierService } from 'src/app/services/dossier/dossier.service';
 
 @Component({
   selector: 'app-dossier',
@@ -8,23 +8,31 @@ import { DossierService } from 'src/app/services/dossier.service';
   styleUrls: ['./dossier.component.css']
 })
 export class DossierComponent {
-  message = '';
-  dossier: Dossier = new Dossier()
+ 
+  dossier: IDossier={ 
+  code_dossier:'',
+  nom:'',
+  description:'',
+  classeur_id:0,
+}
 
-  constructor(private api:DossierService) {}
+  constructor(private dossierlist :DossierService, private api:DossierService) {}
 
   ngOnInit(): void{}
 
-  onClick() {
+  onClick(){
     this.api.saveDossier(this.dossier).subscribe(
       {next: (data: any)=>{
         console.log(data);
-        this.message= 'Enregistrement reussi avec succes';
+        alert('Enregistrement reussi avec succes');
+        window.location.reload();
       },error(err) {
         console.log(err);
         onmessage = err.message;
-      },}
+      }
+    }
       
-    )
-}
-}
+    )};
+ }
+
+ 

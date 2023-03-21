@@ -1,0 +1,40 @@
+
+<div class="container-fliud">
+    <app-navbar></app-navbar>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <form action="#" method="post" class="row g-3">
+     
+    <div class="col-md-6">
+      <label for="inputcode" class="form-label " >Numero classeur</label>
+      <input type="text" class="form-control" placeholder="Veillez entrer le code du dossier"[(ngModel)]="classeur[0].classeur_id"  name="classeur_id" >
+    </div>
+    <div class="col-md-6 ">
+      <label for="input "  class="form-label">Code Classeur</label>
+      <input type="text" class="form-control" placeholder="Veillez entrer le nom du dossier" [(ngModel)]="classeur[0].code_classeur"  name="code_classeur">
+    </div>
+    <div class="col-md-6 ">
+      <label for="inputnumero" class="form-label">Numéro Armoire</label>
+      <input type="text" class="form-control" placeholder=" numero compagnie" [(ngModel)]="classeur[0].armoire_id"  name="armoire_id">
+    </div>
+    
+    <div class="col-md-12 button">
+      <button type="button" class="btn btn-info col-md-4" (click)="UpdateClasseur()">Valider</button>
+      <button type="reset" class="btn btn-warning col-md-4 cancelbtn">Annuler</button>
+    </div>
+  </form> 
+  <br>
+  <br>
+   
+  <div class="container-fliud">
+    <app-footer></app-footer>
+    
+  </div>
+  
+  
+  
+ 

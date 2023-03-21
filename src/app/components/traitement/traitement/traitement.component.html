@@ -4,15 +4,14 @@
 <br>
 <br>
 <br>
-<br>
-<p *ngIf="message" style="color:green">{{message}}</p>
+<br> 
 <form action="#" method="post">
   <div class="container">
-    <label for="psw"><h4><b> date traitement </b></h4> </label>
+    <label for="psw"><h4><b> Date traitement </b></h4> </label>
     <input type="text" placeholder="choisissez le numero du compagnie"  [(ngModel)]="traitement.date_traitement"  name="date_traitement" required>
-    <label for="uname"><h4><b>numero dossier</b></h4></label>
+    <label for="uname"><h4><b>Numero dossier</b></h4></label>
     <input type="text" placeholder="Veillez enter la description"  [(ngModel)]="traitement.dossier_id"  name="dossier_id" required onfocus>
-    <label for="uname"><h4><b>numero utilisateur</b></h4></label>
+    <label for="uname"><h4><b>Numero utilisateur</b></h4></label>
     <input type="text" placeholder="Veillez enter la description"   [(ngModel)]="traitement.utilisateur_id" name="utilisateur_id" required>
     <div class="btn1">
      <button class="btn btn-info btn-lg mx-2" type="submit"  (click)="onClick()" >Enregistrer</button>
@@ -22,5 +21,5 @@
 </form>
 <div class="container-fliud">
     <app-footer></app-footer>
-  </div>
+</div>
 

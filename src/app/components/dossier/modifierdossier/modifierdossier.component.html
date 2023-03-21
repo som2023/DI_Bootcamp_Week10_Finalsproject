@@ -1,0 +1,32 @@
+
+  <div class="container-fliud">
+    <app-navbar></app-navbar>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+<form action="#" method="post">
+    
+    <div class="container" >
+        <label for="uname"><h3><b>Numero</b></h3></label>
+        <input type="text" [(ngModel)]="dossier[0].dossier_id" name="dossier_id" readonly>
+        <label for="uname"><h3><b>code dossier</b></h3></label>
+        <input type="text" [(ngModel)]="dossier[0].code_dossier" name="code_dossier" >
+        <label for="uname"><h3><b>nom dossier</b></h3></label>
+        <input type="text" [(ngModel)]="dossier[0].nom" name="nom">
+        <label for="uname"><h3><b>description</b></h3></label>
+        <input type="text" [(ngModel)]="dossier[0].description" name="description">
+        <label for="uname"><h3><b>numero classeur</b></h3></label>
+        <input type="text" [(ngModel)]="dossier[0].classeur_id" name="classeur_id">
+        <div class="btn1">
+         <button class="btn btn-info btn-lg mx-2" type="submit"  name="submit" (click)="Updatedossier()" >Valider</button>
+         <input class="btn btn-warning btn-lg mx-2" type="reset" value="Annuler">
+        </div> 
+    </div>      
+</form>
+<hr>
+<br>
+<div class="container-fliud">
+    <app-footer></app-footer>
+</div>

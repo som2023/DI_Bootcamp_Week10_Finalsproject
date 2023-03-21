@@ -16,7 +16,7 @@
               </div>
               <div class="form-group first">
                 <label for="name">Prenom</label>
-                <input type="text" class="form-control" placeholder="lastname" name="Prenom" id="name" [(ngModel)]="user.prenom">
+                <input type="text" class="form-control" placeholder="Fisrtname" name="Prenom" id="name" [(ngModel)]="user.prenom">
               </div>
               <div class="form-group first">
                 <label for="username">Email</label>
@@ -32,14 +32,10 @@
               </div>
               <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" placeholder="entrer le mot de passe" name = "pwd" id="password" [(ngModel)]="user.pwd">
-              </div>
-              <div class="form-group first">
-                <label for="username">roles id</label>
-                <input type="number" class="form-control" placeholder="l'identifiant utilisateur"  name="pseudo" id="username" [(ngModel)]="user.roles">
+                <input class="form-control" type="password" placeholder="password" aria-label="pwd" [(ngModel)]="user.pwd" name="pwd">
               </div>
               <br>
-              <button type="submit" value="Register" (click)="onClick()" class="btn btn-block btn-primary">Envoyer</button>
+              <button type="submit" value="Register" (click)="onClick()"class="btn btn-block btn-primary">Envoyer</button>
               <button type="reset" value="annuler" class="btn btn-block btn-warning mx-2">Annuler</button>
             </form>
           </div>

@@ -10,22 +10,25 @@
     </a>
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Accueil</a>
+        <a class="nav-link active" [routerLink]="['/home']">Accueil</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link active" href="#">Pays</a>
+        <a class="nav-link active" [routerLink]="['/ajouter']">Pays</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link active" href="#">Armoire</a>
+        <a class="nav-link active" [routerLink]="['/ajoutercompagnie']">Compagnie</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link active" [routerLink]="['/ajouterarmoire']">Armoire</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="#">Classeur</a>
+        <a class="nav-link active" [routerLink]="['/ajouterclasseur']">Classeur</a>
       </li>
       <li class="nav-item">                                                                           
-        <a class="nav-link active" [routerLink]="['/app-dossier']" routerLinkActive="router-link-active" >Dossier</a>
+        <a class="nav-link active" [routerLink]="['/dossier']">Dossier</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="#">Dasboard</a>
+        <a class="nav-link active"  [routerLink]="['/dashboard']">Dasboard</a>
       </li>
       <li class="nav-item">
         <button type="button" class="btn btn-dark" >Deconnexion</button>

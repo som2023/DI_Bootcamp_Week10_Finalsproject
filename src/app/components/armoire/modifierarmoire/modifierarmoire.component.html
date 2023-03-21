@@ -1,0 +1,42 @@
+
+ <div class="container-fliud">
+    <app-navbar></app-navbar>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <form action="#" method="post" class="row g-3">
+     
+    <div class="col-md-6">
+      <label for="inputcode" class="form-label " >Numero Armoire</label>
+      <input type="text" class="form-control" placeholder="Veillez entrer le code du dossier"[(ngModel)]="armoire[0].armoire_id"  name="armoire_id" >
+    </div>
+    <div class="col-md-6 ">
+      <label for="input "  class="form-label">Code Armoire</label>
+      <input type="text" class="form-control" placeholder="Veillez entrer le nom du dossier" [(ngModel)]="armoire[0].code_armoire"  name="code_armoire">
+    </div>
+    <div class="col-md-6  ">
+      <label for="input " class="form-label" >Description</label>
+      <input type="text" class="form-control" placeholder="Veillez descrire le dossier" [(ngModel)]="armoire[0].description" name="description" >
+    </div>
+    <div class="col-md-6 ">
+      <label for="inputnumero" class="form-label">Numéro compagnie</label>
+      <input type="text" class="form-control" placeholder=" numero compagnie" [(ngModel)]="armoire[0].compagnie_id"  name="compagnie_id">
+    </div>
+    
+    <div class="col-md-12 button">
+      <button type="button" class="btn btn-info col-md-4" (click)="UpdateArmoire()">Valider</button>
+      <button type="reset" class="btn btn-warning col-md-4 cancelbtn">Annuler</button>
+    </div>
+  </form> 
+  <br>
+  <br>
+   
+  <div class="container-fliud">
+    <app-footer></app-footer>
+  </div>
+  
+  
+  

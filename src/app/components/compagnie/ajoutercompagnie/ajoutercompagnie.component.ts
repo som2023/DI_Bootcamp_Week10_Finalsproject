@@ -1,5 +1,5 @@
-import { CompagnieService } from './../../../services/compagnie.service';
-import { Compagnie } from './../../../models/compagnie';
+import { CompagnieService } from '../../../services/compagnie/compagnie.service';
+import {  ICompagnie } from '../../../models/compagnie/compagnie';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./ajoutercompagnie.component.css']
 })
 export class AjoutercompagnieComponent {
-  message = '';
-  compagnie: Compagnie = new Compagnie()
+  
+  compagnie: ICompagnie={
+    compagnie_id:0,
+    nom:'',
+    adresse:'',
+    pays_id:0
+  }
 
   constructor(private api:CompagnieService) {}
 
@@ -19,13 +24,14 @@ export class AjoutercompagnieComponent {
     this.api.saveCompagnie(this.compagnie).subscribe(
       {next: (data)=>{
         console.log(data);
-        this.message= 'Enregistrement reussi avec succes';
+        alert("Enregistrement rèussi avec succès");
+        window.location.reload();
       },error(err) {
         console.log(err);
+        alert("Echec d'enregistrement");
         onmessage = err.message;
-      },}
-      
-    )
-}
+      }
+    });
+  }
 
 }

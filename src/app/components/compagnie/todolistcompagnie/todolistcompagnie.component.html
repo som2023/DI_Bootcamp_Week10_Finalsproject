@@ -1,0 +1,26 @@
+<div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Numero Compagnie</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Adresse</th>
+          <th scope="col">Numero Pays </th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let compagnielist of compagnie">
+          <th scope="row">{{compagnielist.compagnie_id}}</th>
+          <td>{{compagnielist.nom}}</td>
+          <td>{{compagnielist.adresse}}</td>
+          <td>{{compagnielist.pays_id}}</td>
+          <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifiercompagnie/'+compagnielist.compagnie_id]">Modifier</button>
+            <button type="button" class="btn btn-outline-danger">supprimer</button></td>
+        </tr>
+                       
+      </tbody>
+    </table>
+    
+  </div>
+

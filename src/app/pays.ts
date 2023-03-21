@@ -1,5 +1,5 @@
-export class Pays {
-    id!: number;
-    nom!:string;
-    localisation!:string;
+export interface IPays {
+    pays_id?: number;
+    nom:string;
+    localisation:string;
 }

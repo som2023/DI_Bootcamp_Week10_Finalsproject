@@ -1,0 +1,41 @@
+
+<div class="container-fliud">
+    <app-navbar></app-navbar>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <form action="#" method="post" class="row g-3">
+    <div class="col-md-6 ">
+      <label for="input "  class="form-label">Numero Compagnie </label>
+      <input type="text" class="form-control" placeholder="Numero compagnie" [(ngModel)]="compagnie[0].compagnie_id"  name="compagnie_id">
+    </div>
+    <div class="col-md-6  ">
+      <label for="input " class="form-label" >Nom</label>
+      <input type="text" class="form-control" placeholder="Veillez descrire le dossier" [(ngModel)]="compagnie[0].nom" name="nom" >
+    </div>
+    <div class="col-md-6 ">
+      <label for="inputnumero" class="form-label">Adresse</label>
+      <input type="text" class="form-control" placeholder=" numero compagnie" [(ngModel)]="compagnie[0].adresse"  name="adresse">
+    </div>
+    <div class="col-md-6 ">
+        <label for="input "  class="form-label">Numero Pays </label>
+        <input type="text" class="form-control" placeholder="Numero Pays" [(ngModel)]="compagnie[0].pays_id"  name="pays_id">
+    </div>
+    <div class="col-md-12 button">
+      <button type="button" class="btn btn-info col-md-4" (click)="UpdateCompagnie()">Valider</button>
+      <button type="reset" class="btn btn-warning col-md-4 cancelbtn">Annuler</button>
+    </div>
+  </form> 
+  <br>
+  <br>
+  <hr>
+  <app-todolistcompagnie></app-todolistcompagnie> 
+  <div class="container-fliud">
+    <app-footer></app-footer>
+  </div>
+  
+  
+  

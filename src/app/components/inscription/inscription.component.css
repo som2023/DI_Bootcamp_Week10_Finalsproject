@@ -118,7 +118,7 @@ body {
     background: #fb8633; }
   
   .control input:disabled ~ .control__indicator {
-    background: #e6e6e6;
+    background: #fff;
     opacity: 0.9;
     pointer-events: none; }
   

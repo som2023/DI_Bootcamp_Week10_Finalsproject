@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Numero</th>
+          <th scope="col">Code Classeur</th>
+          <th scope="col">Numero Armoire </th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let classeurlist of classeur">
+          <th scope="row">{{classeurlist.classeur_id}}</th>
+          <td>{{classeurlist.code_classeur}}</td>
+          <td>{{classeurlist.armoire_id}}</td>
+          <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifierclasseur/'+classeurlist.classeur_id]">Modifier</button>
+            <button type="button" class="btn btn-outline-danger">supprimer</button></td>
+        </tr>          
+      </tbody>
+    </table>
+  </div>
+

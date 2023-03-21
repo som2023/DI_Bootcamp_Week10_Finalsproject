@@ -1,0 +1,30 @@
+<div class="container-fliud">
+    <app-navbar></app-navbar>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+<form action="#" method="post">
+    
+    <div class="container" >
+        <label for="uname"><h3><b>Numero pays</b></h3></label>
+        <input type="text" [(ngModel)]="pays[0].pays_id" name="pays_id" readonly>
+        <label for="uname"><h3><b>nom pays</b></h3></label>
+        <input type="text" [(ngModel)]="pays[0].nom" name="nom" >
+        <label for="uname"><h3><b>Localisation </b></h3></label>
+        <input type="text" [(ngModel)]="pays[0].localisation" name="localisation"  required>
+         <div class="btn1">
+         <button class="btn btn-info btn-lg mx-2" type="submit"  name="submit" (click)="UpdatePays()">Valider</button>
+         <input class="btn btn-warning btn-lg mx-2" type="reset" value="Annuler">
+        </div> 
+    </div>      
+</form>
+<hr>
+<br>
+<div class="container">
+    <app-todolist></app-todolist>
+  </div>
+<div class="container-fliud">
+    <app-footer></app-footer>
+  </div>

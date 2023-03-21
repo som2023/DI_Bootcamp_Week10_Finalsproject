@@ -1,0 +1,26 @@
+<div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Numero</th>
+          <th scope="col">code armoire</th>
+          <th scope="col">description</th>
+          <th scope="col">numero compagnie </th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let armoirelist of armoire">
+          <th scope="row">{{armoirelist.armoire_id}}</th>
+          <td>{{armoirelist.code_armoire}}</td>
+          <td>{{armoirelist.description}}</td>
+          <td>{{armoirelist.compagnie_id}}</td>
+          <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifierarmoire/'+armoirelist.armoire_id]">Modifier</button>
+            <button type="button" class="btn btn-outline-danger">supprimer</button></td>
+        </tr>
+                       
+      </tbody>
+    </table>
+    
+  </div>
+
