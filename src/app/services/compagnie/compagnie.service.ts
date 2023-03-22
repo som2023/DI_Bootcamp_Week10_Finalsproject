@@ -22,7 +22,10 @@ export class CompagnieService {
     const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
     return this.http.get('http://localhost:8888/compagnie/all', { headers });
   }
-
+  deletecompagniedata(id:number){
+    const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+    return this.http.delete('http://localhost:8888/compagnie/delete/'+id, { headers });
+  }
 }
  
 

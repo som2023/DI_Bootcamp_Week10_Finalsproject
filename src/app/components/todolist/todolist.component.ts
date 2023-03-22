@@ -2,6 +2,7 @@ import { IPays } from './../../pays';
 import { TodolistpaysService } from 'src/app/services/todolistpays/todolistpays.service';
 import { Component } from '@angular/core';
 import { FunctionsService } from 'src/app/services/API/functions.service';
+import { WebserviceService } from 'src/app/services/webservice.service';
 @Component({
   selector: 'app-todolist',
   templateUrl: './todolist.component.html',
@@ -11,7 +12,7 @@ export class TodolistComponent {
   [x: string]: any;
   pays:IPays[]=[];
 
-  constructor(private payslist:TodolistpaysService, private api:FunctionsService){
+  constructor(private payslist:TodolistpaysService, private api:WebserviceService){
 
   }
 
@@ -22,9 +23,12 @@ export class TodolistComponent {
        console.log(this.pays);
     })
   }
-   delete(pays_id:number){
-    this.api.delete(pays_id).subscribe((data:any)=>{
-      alert("Supprimer ok");
-   })
+   deletepays(pays_id:number){
+    this.api.deletePaysdata(pays_id).subscribe((data:any)=>{
+        this.pays = data as IPays[];
+        console.log(this.pays);
+        alert("suppression réeussie avec succès");
+        
+   });
    }
 }

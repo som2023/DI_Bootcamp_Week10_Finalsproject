@@ -23,4 +23,8 @@ export class ClasseurService {
     const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
     return this.http.get('http://localhost:8888/classeur/all', { headers });
   }
+  deleteClasseurData(id:number){
+    const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+    return this.http.delete('http://localhost:8888/classeur/delete/'+id, { headers });
+  }
 }

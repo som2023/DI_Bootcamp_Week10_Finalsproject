@@ -17,13 +17,11 @@ export class FunctionsService {
   ajoutPays(pays: IPays) {
 
     return this.apiservice.post({ endpoint: url_path.ADD_PAYS, data: JSON.stringify(pays) });
-    //window.location.reload();
+     
   }
-  // updatePays(pays: IPays) {
-  //   // return this.apiservice.put({ endpoint: url_path.EDIT_PAYS, data: JSON.stringify(pays) });
-  // }
+   
   getOne(id: any) {
-    //pays/item/
+   
     return this.apiservice.getOne({ endpoint: 'pays/item/', data: id });
 
   }

@@ -1,3 +1,5 @@
+import { HistoriquedossierComponent } from './components/dossier/historiquedossier/historiquedossier.component';
+import { TraitementComponent } from './components/traitement/traitement/traitement.component';
 import { ModifiercompagnieComponent } from './components/compagnie/modifiercompagnie/modifiercompagnie.component';
 import { ModifierarmoireComponent } from './components/armoire/modifierarmoire/modifierarmoire.component';
 import { DossierrechercherComponent } from './components/dossier/dossierrechercher/dossierrechercher.component';
@@ -67,6 +69,14 @@ const routes: Routes = [
 {
   path:'modifiercompagnie/:id',component :ModifiercompagnieComponent
 },
+{
+  path:'traitement',component: TraitementComponent
+}
+,
+{
+  path:'historiquedossier',component:HistoriquedossierComponent
+}
+,
 {
   path : '',
   redirectTo : 'login',

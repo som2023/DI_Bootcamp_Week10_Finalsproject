@@ -11,6 +11,8 @@ import { ClasseurService } from 'src/app/services/classeur/classeur.service';
 export class TodolistclasseurComponent {
   [x: string]: any;
   classeur:IClasseur[]=[];
+
+
   constructor(private classeurlist:ClasseurService){}
   
   
@@ -20,5 +22,13 @@ export class TodolistclasseurComponent {
       this.classeur = data as IClasseur[];
        console.log(this.classeur);
     });
+}
+deleteClasseur(classeur_id:number){
+  this.classeurlist.deleteClasseurData(classeur_id).subscribe((data)=>{
+    this.classeur = data as IClasseur[];
+     console.log(this.classeur);
+     alert('supprimé avec succès');
+     window.location.reload();
+});
 }
 }

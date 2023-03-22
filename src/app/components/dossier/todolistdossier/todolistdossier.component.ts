@@ -20,4 +20,14 @@ export class TodolistdossierComponent {
        console.log(this.dossier);
     });
 }
+
+
+deletTodo(id:any){
+  this.dossierlist.deletedata(id).subscribe((data)=>{
+    this.dossier = data as IDossier[];
+     console.log(this.dossier);
+     alert('suppression réussie')
+     window.location.reload();
+  });
+}
 }

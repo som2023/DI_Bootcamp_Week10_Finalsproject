@@ -27,6 +27,8 @@ export class WebserviceService {
   savePays(data:any){
     return this.http.post(this.baseUrl + 'pays/add' ,data);
   }
-
-
+  deletePaysdata(id:any){
+    const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+    return this.http.delete('http://localhost:8888/pays/delete/'+id, { headers });
+  }
 }

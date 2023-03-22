@@ -37,9 +37,7 @@ UpdatePays(){
             window.location.reload();
             console.log(res);
           }
-            
-            
-          );
+       );
  
 }
 }

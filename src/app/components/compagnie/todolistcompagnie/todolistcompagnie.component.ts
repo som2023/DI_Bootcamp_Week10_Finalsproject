@@ -10,7 +10,7 @@ import { CompagnieService } from 'src/app/services/compagnie/compagnie.service';
 export class TodolistcompagnieComponent {
   [x: string]: any;
   compagnie:ICompagnie[]=[];
-  constructor(private compagnielist:CompagnieService){}
+  constructor(private compagnielist:CompagnieService, private api: CompagnieService){}
   
   
   ngOnInit(): void{
@@ -20,4 +20,13 @@ export class TodolistcompagnieComponent {
        console.log(this.compagnie);
     });
 }
+deletecompagnie(id:number){
+  this.api.deletecompagniedata(id).subscribe((data:any)=>{
+      this.compagnie = data as ICompagnie[];
+      console.log(this.compagnie);
+      alert("suppression réussie avec succès");
+      window.location.reload()
+      
+ });
+ }
 }

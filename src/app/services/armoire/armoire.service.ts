@@ -23,5 +23,9 @@ export class ArmoireService {
     const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
     return this.http.get('http://localhost:8888/armoire/all', { headers });
   }
+  deletearmoireData(id:number){
+    const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+    return this.http.delete('http://localhost:8888/armoire/delete/'+id, { headers });
+  }
 
 }

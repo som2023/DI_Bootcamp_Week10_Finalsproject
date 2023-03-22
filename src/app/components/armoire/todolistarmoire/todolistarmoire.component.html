@@ -15,8 +15,8 @@
           <td>{{armoirelist.code_armoire}}</td>
           <td>{{armoirelist.description}}</td>
           <td>{{armoirelist.compagnie_id}}</td>
-          <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifierarmoire/'+armoirelist.armoire_id]">Modifier</button>
-            <button type="button" class="btn btn-outline-danger">supprimer</button></td>
+          <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifierarmoire/'+armoirelist.armoire_id]"><i class="bi bi-pencil-square"></i></button>
+            <button type="button" class="btn btn-outline-danger" (click)="deleteArmoire(armoirelist.armoire_id)"><i class="bi bi-trash"></i></button></td>
         </tr>
                        
       </tbody>

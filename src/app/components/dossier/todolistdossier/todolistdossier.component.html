@@ -17,8 +17,8 @@
           <td>{{dossierlist.nom}}</td>
           <td>{{dossierlist.description}}</td>
           <td>{{dossierlist.classeur_id}}</td>
-          <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifierdossier/'+dossierlist.dossier_id]">Modifier</button>
-            <button type="button" class="btn btn-outline-danger">supprimer</button></td>
+          <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifierdossier/'+dossierlist.dossier_id]"><i class="bi bi-pencil-square"></i></button>
+            <button type="button" class="btn btn-outline-danger" (click)="deletTodo(dossierlist.dossier_id)"><i class="bi bi-trash3"></i></button></td>
         </tr>
                        
       </tbody>

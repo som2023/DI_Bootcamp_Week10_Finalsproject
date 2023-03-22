@@ -33,6 +33,7 @@ import { TodolistclasseurComponent } from './components/classeur/todolistclasseu
 import { TodolistcompagnieComponent } from './components/compagnie/todolistcompagnie/todolistcompagnie.component';
 import { ModifiercompagnieComponent } from './components/compagnie/modifiercompagnie/modifiercompagnie.component';
 import { NavbardashboardComponent } from './components/navbardashboard/navbardashboard.component';
+import { HistoriquedossierComponent } from './components/dossier/historiquedossier/historiquedossier.component';
  
 
 
@@ -66,6 +67,7 @@ import { NavbardashboardComponent } from './components/navbardashboard/navbardas
     TodolistcompagnieComponent,
     ModifiercompagnieComponent,
     NavbardashboardComponent,
+    HistoriquedossierComponent,
      
   
   ],

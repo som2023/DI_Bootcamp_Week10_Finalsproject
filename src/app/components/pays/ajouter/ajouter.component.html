@@ -9,11 +9,11 @@
     
     <div class="container" >
         <label for="uname"><h3><b>nom pays</b></h3></label>
-        <input type="text" placeholder="Veillez enter le code de dossier" name="nom" [(ngModel)]="valpays.nom"  required>
+        <input type="text" placeholder="Veillez enter le code de dossier"  name="nom" [(ngModel)]="valpays.nom"  required>
         <label for="uname"><h3><b>Localisation </b></h3></label>
         <input type="text" placeholder="Veillez enter le code de dossier" name="localisation" [(ngModel)]="valpays.localisation" required>
          <div class="btn1">
-         <button class="btn btn-info btn-lg mx-2" type="submit"  (click)="ajouterPays()"  name="submit">Enregistrer</button>
+         <button class="btn btn-info btn-lg mx-2" type="submit"  (click)="ajouterPays()" name="submit">Enregistrer</button>
          <input class="btn btn-warning btn-lg mx-2" type="reset" value="Annuler">
         </div> 
     </div>      

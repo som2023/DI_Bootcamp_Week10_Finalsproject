@@ -13,8 +13,8 @@
       <td>{{payslist.nom}}</td>
       <td>{{payslist.localisation}}</td>
        
-      <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifier/'+payslist.pays_id]">Modifier</button>
-        <button type="button" class="btn btn-outline-danger" (click)="delete(payslist.pays_id!)">supprimer</button></td>
+      <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifier/'+payslist.pays_id]"><i class="bi bi-pencil-square"></i></button>
+        <button type="button" class="btn btn-outline-danger" (click)="deletepays(payslist.pays_id!)"><i class="bi bi-trash"></i></button></td>
     </tr>
                    
   </tbody>

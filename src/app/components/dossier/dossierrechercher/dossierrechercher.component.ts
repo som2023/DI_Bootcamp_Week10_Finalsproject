@@ -1,6 +1,6 @@
-import { TraitementService } from 'src/app/services/traitement/traitement.service';
-import { ITraitement } from './../../../models/traitement/traitement';
-import { Component, OnInit } from '@angular/core';
+import { RechercherdossierService } from './../../../services/recherche/rechercherdossier.service';
+import { IRecherche} from './../../../models/recherche/rechercher';
+import { Component} from '@angular/core';
  
 
 @Component({
@@ -10,18 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DossierrechercherComponent{
  
-constructor(private traitementlist : TraitementService){}
+constructor(private traitementlist : RechercherdossierService){}
 [x: string]: any;
-traitement:ITraitement[]=[];
+recherche:IRecherche[]=[];
+
+search!: any
 
 
 
- getElement(){
-  this. traitementlist.getData().subscribe((data)=>{
-    this.traitement = data as ITraitement[];
-    console.log(this.traitement);
+ getbynam(){
+    this. traitementlist.getRcechercheData(this.search).subscribe((data)=>{
+    this.recherche = data as IRecherche[];
+    console.log(this.recherche);
+     this.search="";
  })
  }
  
+
+
  
 }

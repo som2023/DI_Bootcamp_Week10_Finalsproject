@@ -20,4 +20,12 @@ export class TodolistarmoireComponent {
        console.log(this.armoire);
     });
 }
+deleteArmoire(id:number){
+  this.armoirelist.deletearmoireData(id).subscribe((data)=>{
+    this.armoire = data as IArmoire[];
+     console.log(this.armoire);
+     alert('Supprimé avec succès');
+     window.location.reload();
+});
+}
 }

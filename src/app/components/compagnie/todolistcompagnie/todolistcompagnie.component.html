@@ -15,8 +15,8 @@
           <td>{{compagnielist.nom}}</td>
           <td>{{compagnielist.adresse}}</td>
           <td>{{compagnielist.pays_id}}</td>
-          <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifiercompagnie/'+compagnielist.compagnie_id]">Modifier</button>
-            <button type="button" class="btn btn-outline-danger">supprimer</button></td>
+          <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifiercompagnie/'+compagnielist.compagnie_id]"><i class="bi bi-pencil-square"></i></button>
+            <button type="button" class="btn btn-outline-danger " (click)="deletecompagnie(compagnielist.compagnie_id)"><i class="bi bi-trash"></i></button></td>
         </tr>
                        
       </tbody>

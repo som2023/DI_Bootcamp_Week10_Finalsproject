@@ -13,8 +13,8 @@
           <th scope="row">{{classeurlist.classeur_id}}</th>
           <td>{{classeurlist.code_classeur}}</td>
           <td>{{classeurlist.armoire_id}}</td>
-          <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifierclasseur/'+classeurlist.classeur_id]">Modifier</button>
-            <button type="button" class="btn btn-outline-danger">supprimer</button></td>
+          <td><button type="button" class="btn btn-outline-primary" [routerLink]="['/modifierclasseur/'+classeurlist.classeur_id]"><i class="bi bi-pencil-square"></i></button>
+            <button type="button" class="btn btn-outline-danger" (click)="deleteClasseur(classeurlist.classeur_id)"><i class="bi bi-trash"></i></button></td>
         </tr>          
       </tbody>
     </table>

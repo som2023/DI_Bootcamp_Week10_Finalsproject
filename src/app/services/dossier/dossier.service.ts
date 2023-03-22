@@ -23,4 +23,8 @@ export class DossierService {
     const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
     return this.http.get('http://localhost:8888/dossier/all', { headers });
   }
+  deletedata(id:any){
+    const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+    return this.http.delete('http://localhost:8888/dossier/delete/'+id, { headers });
+  }
 }

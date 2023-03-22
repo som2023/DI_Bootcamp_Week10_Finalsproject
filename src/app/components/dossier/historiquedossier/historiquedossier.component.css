@@ -1,12 +1,19 @@
- 
- 
+
 /* :root{
   --bs-info:var(--bs-info);
   --bgcolor:var(--bs-body-color-rgb);
   --bs-light:var(--bs-light);
 } */
+
+.container{
+    margin-top: 10vh !important;
+    width:50%;
+    /* background-color: #f0a9a9; */
+}
 body {
     font-size: .875rem;
+    
+
   }
   
   .feather {
@@ -149,36 +156,36 @@ body {
         background-color:var(--bs-info)!important;
     }
     i{
-      font-size:20px;
-       color: brown;
-  }
-  .navbar{
-      background-color: cadetblue !important;
-  }
-  .nav-text{
-      font-size: 25px;
-  }
-  .save{
-      font-size: 15px;
-  }
-  main{
-      padding-right:5rem;
-      background-color: #DCDCDC;
-  }
-  img{
-      text-align: center;
-      margin-left: 500px;
-      margin-top: -50px;
+        font-size:20px;
+         color: brown;
+    }
+    .navbar{
+        background-color: cadetblue !important;
+    }
+    .nav-text{
+        font-size: 25px;
+    }
+    .save{
+        font-size: 15px;
+    }
+    main{
+        padding-right:5rem;
+        background-color: #DCDCDC;
+    }
+    img{
+        text-align: center;
+        margin-left: 500px;
+        margin-top: -50px;
 
-  }
-  .form-control:hover{
-     background-color:azure;
-  }
- .hovertext:hover{
-  background-color:#DCDCDC;
- }
- .btn:hover{
-   background-color:orange;
-   color: #fff;
- }
-  
+    }
+    .form-control:hover{
+       background-color:azure;
+    }
+   .hovertext:hover{
+    background-color:#DCDCDC;
+   }
+   .btn:hover{
+     background-color:orange;
+     color: #fff;
+   }
+    
